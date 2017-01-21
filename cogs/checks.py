@@ -3,7 +3,11 @@ import discord.utils
 import dbaseConn
 
 def checkAdmin(user):
-    List = dbaseConn.showAdmin(user.server.id)
+    try:
+        List = dbaseConn.showAdmin(user.server.id)
+    except AttributeError:
+        return False
+
     userRole = user.author.roles  
     if user.author.server_permissions.administrator:
         return True

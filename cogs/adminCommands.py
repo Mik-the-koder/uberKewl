@@ -41,7 +41,6 @@ class adminCommands:
         self.getMute = getMute
 
     @bot.group(pass_context=True)
-    @checks.isAdmin()
     async def admin(self,ctx):
         """ admin commands """
         if ctx.invoked_subcommand is None:
