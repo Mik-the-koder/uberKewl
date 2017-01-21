@@ -11,20 +11,8 @@ bot = commands.Bot(command_prefix = ';')
 class adminCommands:
     def __init__(self,bot):
         self.bot = bot
-        def checkAdmin(user):
-            List = dbaseConn.showAdmin(user.server.id)
-            userRole = user.author.roles  
-            if user.author.server_permissions.administrator:
-                return True
-            elif True:
-                for x in range(len(List)):
-                    for y in userRole:
-                        if y.id in List[x][0]:
-                            return True
-            else:
-                return False
 
-        def getMute(message):
+	def getMute(message):
             Roles = message.server.roles
             for role in Roles:
                 if role.name == 'redMute' or role.name == 'AethexMuted':
