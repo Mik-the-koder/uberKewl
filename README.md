@@ -6,3 +6,5 @@ install mongo drivers by
 ```
 python3.5 -m pip install pymongo
 ```
+# MIT License
+Heck yea
